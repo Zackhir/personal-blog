@@ -6,6 +6,7 @@ export default function PostCard({ post }) {
         alt={post.title}
         className="w-full h-48 object-cover"
         loading="lazy"
+        onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400?text=Image"; }}
       />
       <div className="p-4">
         <h3 className="text-xl font-semibold mb-2 hover:text-blue-600 transition-colors cursor-pointer">

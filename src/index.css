@@ -1,11 +1,56 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Tailwind v4 */
+@import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+/* Optional: Tailwind Preflight only (if you wanted just reset)
+   @import "tailwindcss/preflight"; */
+
+/* Theme tokens (v4): add your brand styles here */
+@theme {
+  /* Fonts */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Colors (examples) */
+  --color-brand-600: #4f46e5; /* indigo-600 vibe */
+  --color-brand-700: #4338ca;
+  --color-surface: #ffffff;
+  --color-muted: #6b7280;    /* gray-500 */
+  --color-bg: #f8fafc;       /* gray-50 */
+
+  /* Radii and shadows (tokens Tailwind understands) */
+  --radius-xl: 1rem;
+  --shadow-card: 0 10px 25px -10px rgb(2 6 23 / 0.35);
 }
 
+/* Global base */
+html { scroll-behavior: smooth; }
 body {
-  @apply bg-gray-50 text-gray-900 font-sans;
+  @apply bg-[var(--color-bg)] text-slate-900 font-sans antialiased;
+  margin: 0;
+}
+
+/* Section container helper */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Minimal appear-on-scroll animation.
+   We’ll trigger this using an IntersectionObserver in React, or
+   you can just apply the class for a simple load-in effect. */
+@keyframes fade-slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Utility class that works with Tailwind’s arbitrary values too */
+.reveal {
+  animation: fade-slide-up .6s ease-out both;
+}
+
+/* Line clamp without the plugin */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
