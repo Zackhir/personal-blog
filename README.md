@@ -1,12 +1,18 @@
-# React + Vite
+# 📝 Personal Blog App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **personal blog application** built with **React, Axios, and Tailwind CSS**.  
+This project was developed as **Task 3** of the **Elevvo Pathways Program**.  
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Fetches posts dynamically from [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API  
+- Automatically assigns categories: **Tech, Travel, Food**  
+- Random images from **Picsum** API based on category  
+- **Search** and **filter** functionality  
+- **Pagination** for better navigation  
+- Fully **responsive UI** with Tailwind CSS  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **React** (Vite)  
+- **Axios** for API requests  
+- **Tailwind CSS v4** for styling  
+- **LoremFlickr API** for random images  
